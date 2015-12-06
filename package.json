@@ -1,0 +1,15 @@
+{
+  "name": "lostTest",
+  "private": true,
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.0.2",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "6.0.10",
+    "gulp-sourcemaps": "^1.5.2",
+    "lost": "6.6.2"
+  }
+}
