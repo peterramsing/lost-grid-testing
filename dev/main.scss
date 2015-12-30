@@ -1,0 +1,37 @@
+$break1: 400px;
+$break2: 900px;
+
+* {
+  lost-utility: edit;
+}
+
+.grid-lost {
+  & + & {
+    margin-top: 3.2rem;
+  }
+  section {
+    lost-center: 1170px;
+  }
+  div {
+    lost-column: 1/4;
+    @media all and (min-width: $break1) {
+      lost-column: 1/6;
+    }
+    @media all and (min-width: $break2) {
+      lost-column: 1/12;
+    }
+  }
+}
+
+.grid-lost-2 {
+  @extend .grid-lost;
+  & > section > div {
+    lost-column: 1/4;
+  }
+  & > section > div:last-child {
+    lost-column: 1/2 3;
+  }
+  & > section > div > section > div {
+    lost-column: 1/4;
+  }
+}

@@ -6,6 +6,7 @@ var gulp            = require("gulp"),
 
     // STYLES
     sourcemaps   = require("gulp-sourcemaps"),
+    sass     = require("gulp-sass"),
 
     postcss          = require("gulp-postcss"),
         lost         = require("lost")
@@ -14,8 +15,10 @@ var gulp            = require("gulp"),
 
 // STYLES
 gulp.task("styles", function() {
-    return gulp.src("dev/main.css")
-        .pipe(sourcemaps.init())
+    return gulp.src("dev/main.scss")
+        // .pipe(sourcemaps.init())
+
+        .pipe(sass())
         .pipe(postcss([
             lost()
         ]))
@@ -23,8 +26,8 @@ gulp.task("styles", function() {
         // .on("error", function(err) {
         //     console.log(err);
         // })
-        .pipe(sourcemaps.write("./"))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write("./"))
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest("public/styles/"))
 });
 
@@ -32,7 +35,7 @@ gulp.task("default", function() {
 
     gulp.start("styles");
 
-    gulp.watch(["dev/main.css"], ["styles"]);
+    gulp.watch(["dev/main.scss"], ["styles"]);
 
 
 });
