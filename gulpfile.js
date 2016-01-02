@@ -24,7 +24,6 @@ gulp.task("styles", function() {
         //     console.log(err);
         // })
         .pipe(sourcemaps.write("./"))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest("public/styles/"))
 });
 
