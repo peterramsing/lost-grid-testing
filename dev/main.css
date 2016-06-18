@@ -10,10 +10,10 @@
   lost-utility: edit;
 }
 
-.toc-item {
-  lost-column: 1/3;
+.third {
+  lost-column: 1/3 4;
 }
 
-.toc-item.wide {
-  lost-column: 3/3;
+.wide {
+  lost-column: 3/3 1;
 }
